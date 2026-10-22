@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NEON SPIN — Random Baraban</title>
+        <link rel="stylesheet" href="b.css">
+    </head>
+    <body>
+        <header class="topbar">
+            <h2>✦ NEON<span>SPIN</span></h2>
+            <button id="fullscreenBtn">⛶</button>
+        </header>
+
+        <main class="layout">
+            <section class="main-panel">
+                <p class="eyebrow">✦ TASODIFIY TANLOV ✦</p>
+                <h1>Kim <span>g‘olib</span> bo‘ladi?</h1>
+                <p class="subtitle">Ismlarni kiriting va barabanni
+                    aylantiring.</p>
+
+                <div class="wheel-wrap">
+                    <div class="pointer"></div>
+                    <canvas id="wheel" width="700" height="700"></canvas>
+                    <div
+                        class="wheel-center">✦<small>NEON</small><b>SPIN</b></div>
+                </div>
+
+                <button id="spinBtn" class="spin-btn">⟳ BARABANNI
+                    AYLANTIRISH</button>
+                <p id="status">Omad siz tomonda!</p>
+
+                <div id="winnerCard" class="winner-card" hidden>
+                    🏆 <div><small>G‘OLIB</small><strong
+                            id="winnerName"></strong></div>
+                    <button id="dismissWinner">×</button>
+                </div>
+            </section>
+
+            <aside>
+                <section class="card">
+                    <h2>☷ Ishtirokchilar <span
+                            id="participantCount">0</span></h2>
+                    <form id="addForm">
+                        <input id="nameInput" maxlength="32"
+                            placeholder="Ism kiriting..." autocomplete="off">
+                        <button class="add-btn" type="submit">+</button>
+                    </form>
+
+                    <p>Bir nechta ism qo‘shish:</p>
+                    <textarea id="bulkInput"
+                        placeholder="Ali&#10;Vali&#10;Malika"></textarea>
+                    <button id="bulkAddBtn" class="secondary-btn">Ro‘yxatni
+                        qo‘shish</button>
+
+                    <div class="list-heading">
+                        <b>RO‘YXAT</b>
+                        <button id="clearBtn" class="text-btn">Hammasini
+                            tozalash</button>
+                    </div>
+                    <ul id="participantList"></ul>
+                    <p id="emptyMessage">Ism qo‘shish uchun yuqoridan
+                        foydalaning.</p>
+                </section>
+
+                <section class="card">
+                    <h2>↺ G‘oliblar tarixi</h2>
+                    <button id="clearHistoryBtn" class="text-btn">Tarixni
+                        tozalash</button>
+                    <ol id="historyList"></ol>
+                    <p id="historyEmpty">Hali g‘olib aniqlanmadi.</p>
+                </section>
+            </aside>
+        </main>
+
+        <script src="b.js"></script>
+    </body>
+</html>
